@@ -1,0 +1,47 @@
+.leaderboard-page {
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  cursor: none;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  flex-direction: column;
+  flex: 1;
+}
+
+.border-shadow-effect {
+  position: relative;
+  box-shadow: 1px 0px 15px 5px rgba(0, 0, 0, 0.8);
+}
+
+.show-ranks-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  padding: 0 50px;
+}
+
+.cards-wrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  height: 70px;
+  /*width: 420px;*/
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 100px;
+}

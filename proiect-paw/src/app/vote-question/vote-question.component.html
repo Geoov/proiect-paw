@@ -1,0 +1,51 @@
+<div id="vote-container" class="cover-container d-flex h-100 flex-column text-center">
+
+  <div class="parts flex-shrink-1" style="flex:0">
+    <div class="d-flex col-md-6 p-0 h-100">
+      <div class="text-white d-flex align-items-center h-100 p-5 text-center justify-content-center">
+      </div>
+    </div>
+
+    <div class="d-flex col-md-6 p-0 h-100">
+      <div class="text-white d-flex align-items-center h-100 p-5 text-center justify-content-center">
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center" style="flex:0.2">
+    <h1 class="display-4 mb-0"> {{this.question}}</h1>
+  </div>
+
+  <div class="parts flex-grow-2" style="flex:0.4">
+    <div class="d-flex col-md-6 flex-wrap h-100 align-items-center h-100 text-center justify-content-center p-0">
+      <h1 class="display-5 text-white p-0 m-0"> {{answerUser1}} </h1>
+    </div>
+    <div class="d-flex col-md-6 flex-wrap h-100 align-items-center h-100 text-center justify-content-center p-0">
+      <h1 class="display-5 text-white p-0 m-0"> {{answerUser2}} </h1>
+    </div>
+  </div>
+
+  <div class="parts p-3" style="flex:0.4">
+      <div (mouseover)="enter1()" (mouseleave)="leave1()" (click)="!(voted1 || voted2) ? voteQuestion1() : ''"
+           class="d-flex flex-column col-md-6 h-100 align-items-center text-center text-white" [ngStyle]="(voted1) ?
+           {'box-shadow': 'inset 0px 0px 30px 10px rgba(0, 0, 0, .075), 0px 0px 30px 15px ' + color, 'text-shadow':
+            '0 0 5px #fff, 0 0 35px ' + color + ', 0 0 50px ' + color} : {}">
+        <div class="vote-button w-100 h-100 justify-content-center align-items-center d-flex"
+             [ngStyle]="(hover1 && !(voted1 || voted2)) ? {'box-shadow': 'inset 0px 0px 30px 10px rgba(0, 0, 0, .075),' +
+              ' 0px 0px 30px 15px ' + color, 'color': color} : {}">
+          <h1 class="display-2">{{(voted1) ? 'VOTED' : 'VOTE'}}</h1>
+        </div>
+      </div>
+
+      <div (mouseover)="enter2()" (mouseleave)="leave2()" (click)="!(voted1 || voted2) ? voteQuestion2() : ''"
+           class="d-flex flex-column col-md-6 h-100 align-items-center text-center text-white" [ngStyle]="(voted2) ?
+           {'box-shadow': 'inset 0px 0px 30px 10px rgba(0, 0, 0, .075), 0px 0px 30px 15px ' + color, 'text-shadow':
+            '0 0 5px #fff, 0 0 35px ' + color + ', 0 0 50px ' + color} : {}">
+        <div class="vote-button w-100 h-100 justify-content-center align-items-center d-flex"
+             [ngStyle]="(hover2 && !(voted1 || voted2)) ? {'box-shadow': 'inset 0px 0px 30px 10px rgba(0, 0, 0, .075),' +
+              ' 0px 0px 30px 15px ' + color, 'color': color} : {}">
+          <h1 class="display-2">{{(voted2) ? 'VOTED' : 'VOTE'}}</h1>
+        </div>
+      </div>
+  </div>
+</div>

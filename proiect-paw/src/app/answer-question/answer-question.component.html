@@ -1,0 +1,9 @@
+<div id="answer-container" class="cover-container d-flex h-100 flex-column text-center">
+  <h1 class="display-3" style="margin-top: 7rem">{{question}}</h1>
+
+  <div class="wrap-input container d-flex mb-5">
+    <input #answer placeholder = "Answer to this question" (keyup.enter)="!isDisabled ? answerQuestion(answer.value) : ''" required>
+    <button (click)="!isDisabled ? answerQuestion(answer.value) : ''" type="submit"><mat-icon>double_arrow</mat-icon></button>
+  </div>
+
+</div>

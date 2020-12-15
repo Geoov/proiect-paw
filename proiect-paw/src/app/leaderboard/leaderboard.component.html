@@ -1,0 +1,19 @@
+<div class="w-100 h-100 leaderboard-page">
+  <div class="container h-100 w-100 border-shadow-effect pb-5">
+    <h1 class="display-5 mt-5 text-white text-center">Leaderboard</h1>
+    <hr class="bg-white w-100">
+
+    <div class="show-ranks-div mt-5">
+      <div *ngFor="let user of this.displayUser.slice(0, this.users.length); let i=index;" [attr.data-index]="i">
+        <div class="cards-wrapper justify-content-center">
+          <div class="card justify-content-center align-items-center px-3" [ngStyle]="{'box-shadow': '0px 1px 5px ' + user.color,
+          'color': user.color}">
+            <h3 class="m-0"><span>{{user.name}}</span></h3>
+            <h3 class="ml-auto my-0">{{user ? user.score : '' }}</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

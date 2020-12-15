@@ -1,0 +1,7 @@
+<div class="lobby-container">
+  <div class="lobby-item">
+       <div *ngFor = "let user of users">
+               <app-user [user] = "user" [gameCode]="gameCode"></app-user>
+       </div>
+  </div>
+</div>

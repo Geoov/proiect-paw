@@ -1,0 +1,29 @@
+p {
+  margin: 0;
+}
+
+#user-layout {
+  background-color: #333;
+  width: 18.75rem;
+  height: 12.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 0 20px;
+}
+
+#text-layout {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+#text-layout p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 1;
+  vertical-align: middle;
+}

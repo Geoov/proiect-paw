@@ -1,0 +1,37 @@
+<div id="show-votes-container" class="cover-container d-flex h-100 flex-row text-center">
+
+  <div [ngStyle]="(!counter) ? (player1) ? {'border': '10px solid ' + color1, 'padding': '10px'} : {'filter': 'blur(5px)'} : ''"
+       class="d-flex flex-column col-md-6 h-100 text-center text-white pr-3 left-panel justify-content-center">
+    <div class="justify-content-center align-items-center d-flex flex-wrap h-25 mt-auto mb-5 mx-auto w-75">
+      <h1 class="display-5 text-white p-0 m-0">wqewqewqewqewqeq eqweqweqwweqweqweqweqweqeqwe qweqweqweqweqweqweqw </h1>
+    </div>
+
+    <div class="justify-content-center align-items-center d-flex h-25 w-100 mt-auto mb-5">
+      <h1 class="display-2">{{(!counter) ? 'VOTES: ' + votes1 : ''}}</h1>
+    </div>
+  </div>
+
+  <ng-container *ngIf="counter">
+    <div class="middle-border-top mx-auto"></div>
+    <div class="middle-border-bottom mx-auto"></div>
+
+    <div class="time-lapse m-auto d-flex justify-content-center align-items-center">
+      <div class="wrapper-time-lapse d-flex justify-content-center align-items-center w-100 h-100">
+        <h1 class="display-1 m-0">{{counter}}</h1>
+      </div>
+    </div>
+  </ng-container>
+
+
+  <div [ngStyle]="(!counter) ? (player2) ? {'border': '10px solid ' + color2, 'padding': '10px'} : {'filter': 'blur(5px)'} : ''"
+       class="d-flex flex-column col-md-6 h-100 text-center text-white pr-3 right-panel justify-content-center">
+  <div class="justify-content-center align-items-center d-flex flex-wrap h-25 mt-auto mb-5 mx-auto w-75">
+      <h1 class="display-5 text-white p-0 m-0">wqewqewqewqewqeq eqweqweqwweqweqweqweqweqeqwe qweqweqweqweqweqweqw eqwewqeqweqwewq?</h1>
+    </div>
+
+    <div class="justify-content-center align-items-center d-flex h-25 w-100 mt-auto mb-5">
+      <h1 class="display-2">{{(!counter) ? 'VOTES: ' + votes2 : ''}}</h1>
+    </div>
+  </div>
+
+</div>

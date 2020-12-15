@@ -1,0 +1,7 @@
+<ng-container *ngIf="router.url !== '/'">
+  <div class="cursor-follower pc" [style.top]="followerTop" [style.left]="followerLeft"
+       [ngStyle]=" color ? {'background-color': color, opacity: '0.7'} : {'background-color': 'black', 'opacity': '0.2'}"></div>
+  <div class="cursor pc" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>
+</ng-container>
+<router-outlet></router-outlet>
+
